@@ -1,0 +1,557 @@
+.mainContainer {
+  width: 100%;
+  background-color: #efefef;
+}
+/* navbar */
+header {
+  width: 100%;
+  background: rgba(225, 225, 225, 0.36);
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 82px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 40px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  color: white;
+}
+.headerWrapper {
+  width: 100%;
+  padding: 1rem 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 8rem;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.navItemContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.navItem {
+  list-style: none;
+}
+.navLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* hero */
+.heroSec {
+  width: 100%;
+}
+.heroWrapper {
+  width: 100%;
+}
+.heroWrapper {
+  width: 100%;
+}
+.carousel-item{
+  position: relative !important;
+  top: 0;
+  left: 0;
+}
+
+.heroContent {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 825px;
+  gap: 1rem;
+} 
+.heroHeading {
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  color: #ffffff;
+}
+.heroPara {
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+}
+.heroBtn {
+  padding: 0.5rem;
+  border-radius: 12px;
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  border: none;
+  outline: none;
+}
+.heroBtn1{
+  background: #5acfff;
+}
+.heroBtn2{
+  background: rgba(17, 46, 136, 1);
+}
+.heroBtn3{
+  background: #5acfff;
+}
+
+/* service section */
+.serviceSec{
+  width: 100%;
+    background-image: url("/assets/images/serviebg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.serviceWrapper{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+}
+.serviceCard{
+  width: 442px;
+height: 488px;
+ background: #FFFFFF;
+border-radius: 30px;
+border-bottom: 1rem solid linear-gradient(180deg, #C89FFE 3.96%, #9747FF 50.31%, #5A00CF 100%);
+border-radius: 2rem;
+position: relative;
+z-index: 0;
+overflow: hidden;
+transition:.3s;
+cursor: pointer;
+}
+.serviceCard::after{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #C89FFE 3.96%, #9747FF 50.31%, #5A00CF 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    clip-path: polygon(0 93%, 100% 93%, 100% 100%, 0 100%);
+    transition: 0.3s;
+    content: "";
+  
+}
+.serviceCard:nth-child(2)::after{
+  background: linear-gradient(180deg, #6DEDFF 1.35%, #00FFFF 50.31%, #249DFF 99.99%, #00B3FF 100%);
+}
+.serviceCard:nth-child(3)::after{
+  background: linear-gradient(180deg, #B2EDFF 1.35%, #4786FF 50.31%, #0038FF 100%);
+}
+.serviceCard:nth-child(4)::after{
+  background: linear-gradient(180deg, #B2EDFF 1.35%, #4786FF 50.31%, #0038FF 100%);
+}
+.serviceCard:nth-child(5)::after{
+  background: linear-gradient(180deg, #C89FFE 3.96%, #9747FF 50.31%, #5A00CF 100%);
+}
+
+.serviceCard:hover::after{
+  background-image: url("/assets/images/cardImg1.png");
+  background-size: cover;
+clip-path: none;
+}
+.serviceCard:hover:nth-child(2):after{
+  background-image: url("/assets/images/cardImg2.png");
+  background-size: cover;
+clip-path: none;
+}
+.serviceCard:hover:nth-child(3):after{
+  background-image: url("/assets/images/cardImg3.png");
+  background-size: cover;
+clip-path: none;
+}
+.serviceCard:hover:nth-child(4):after{
+  background-image: url("/assets/images/cardImg4.png");
+  background-size: cover;
+clip-path: none;
+}
+.serviceCard:hover:nth-child(5):after{
+  background-image: url("/assets/images/cardImg5.png");
+  background-size: cover;
+clip-path: none;
+}
+
+.serviceCard:hover .serviceCardWrapper>svg{
+  margin-top: 10rem;
+  transition: .4s;
+color: white;
+}
+.serviceCard:hover .serviceCardWrapper>h2{
+transition: .3s;
+font-size: 2.5rem;
+color: white;
+}
+.serviceCard:hover .serviceCardWrapper>p{
+  display: none;
+}
+.serviceCard:hover .serviceCardWrapper>button{
+  display: none;
+}
+
+
+.serviceCardWrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 1rem;
+}
+.serviceCardHeading{
+  font-family: 'League Spartan"';
+font-style: normal;
+font-weight: 700;
+font-size:2rem;
+text-align: center;
+color: #000000;
+}
+.serviceCardPara{
+  font-family: "League Spartan";
+text-align: center;
+font-size: 1rem;
+font-weight: 400;
+}
+.serviceCardBtn{
+border: none;
+outline: none;
+cursor: pointer;
+background: #C89FFE;
+border-radius: 8px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 20px;
+padding: .5rem 1rem;
+}
+.serviceCard:nth-child(2) button{
+  background: #04D8FF;
+}
+.serviceCard:nth-child(3) button{
+  background: #76CEFF;
+}
+.serviceCard:nth-child(4) button{
+  background: #76CEFF;
+}
+.serviceCard:nth-child(5) button{
+  background: #C89FFE;
+}
+
+/* about section */
+
+.aboutSec{
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/assets/images/aboutBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutWrapper{
+  width: 100%;
+  padding: 4rem;
+ 
+}
+.aboutHeading{
+  color: #0038FF;
+  font-size: 2rem;
+  font-family: 'League Spartan';
+}
+.aboutTop{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.aboutTopLeft{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  font-family: 'League Spartan';
+}
+.ourHistory{
+  color: black;
+  font-size: 3rem;
+}
+.historyPara{
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 500;
+font-size: 1rem;
+}
+.aboutTopRight{
+  width: 40%;
+}
+.historyImg{
+  width: 100%;
+}
+.aboutBottom{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 1rem;
+}
+.aboutBottomLeft{
+  width: 60%;
+}
+.aboutBottomRight{
+  width: 40%;
+}
+.aboutBottomLeft>ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.aboutBottomLeft>ul>li{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 500;
+font-size: 1rem;
+}
+.aboutBottomLeft>ul>li>span{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: rgba(151, 71, 255, 1);
+}
+.aboutSecBtn{
+  background: #FFFFFF;
+border: 4px solid #4D89FF;
+border-radius:3rem;
+padding: 0 2rem;
+/* font-family: 'League Spartan'; */
+font-style: normal;
+font-weight: 700;
+font-size: 2.5rem;
+color: #4D89FF;
+margin-bottom: 2rem;
+display: flex;
+align-items: center;
+}
+.aboutSecBtn:hover{
+  background-color:#4D89FF ;
+  color: white;
+}
+
+
+
+
+/* course section */
+.courseSec{
+  width: 100%;
+  background-image: url('/assets/images/coursesBg.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+
+}
+.courseWrapper{
+width: 100%;
+padding: 4rem;
+}
+.courseMainHeading{
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 35px;
+line-height: 20px;
+color: #178FFE;
+}
+.courseDiv{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.courseLeft{
+  width: 50%;
+}
+.courseLeftHeading{
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 2rem;
+display: flex;
+align-items: center;
+letter-spacing: 0.1px;
+text-transform: uppercase;
+margin:1rem 0;
+}
+.courseCard{
+  width: 205px;
+height: 136px;
+background: #FFFFFF;
+border: 3px solid #9747FF;
+border-radius: 20px;
+}
+.courseCard:nth-child(2){
+  border: 3px solid  rgba(11, 116, 253, 1);
+}
+.courseCard:nth-child(3){
+  border: 3px solid  rgba(56, 124, 255, 1);
+}
+.courseCard:nth-child(4){
+  border: 3px solid rgba(151, 71, 255, 1);
+}
+.courseCard:nth-child(5){
+  border: 3px solid  rgba(151, 71, 255, 1);
+}
+.courseCard:nth-child(6){
+  border: 3px solid  rgba(4, 216, 255, 1);
+}
+.courseCardContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+}
+.courseCardWrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.courseCardWrapper>p{
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 500;
+font-size: 1rem;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.1px;
+color: #000000;
+}
+.courseRight{
+  width: 50%;
+}
+.courseImg{
+  width: 100%;
+}
+
+/* learn sec */
+.learnWarapper{
+  width: 100%;
+  padding: 4rem;
+}
+.learnLeft{
+  margin-top: 12rem;
+  width: 60%;
+}
+.learnHeading{
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 700;
+font-size:2rem;
+color: #FFFFFF;
+}
+.learnPara{
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 1.5rem;
+color: #FFFFFF;
+}
+
+.learnLeft>ol>li{
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 1.5rem;
+color: #FFFFFF;
+}
+.learnRight{
+  display: flex;
+  justify-content: flex-end;
+}
+.learnImg{
+  width: 70%;
+}
+
+/* footer */
+footer{
+width: 100%;
+height: 612px;
+background: linear-gradient(180deg, #95B9FF 0.31%, #6F00FF 100%);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.footerWrapper{
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  gap: 1rem;
+}
+.footerWrapper>div{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.footerLogo{
+  width: 100%;
+}
+.footerPara{
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #FFFFFF;
+  margin: 0;
+}
+.socialIconContainer{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.socialIconContainer>svg:hover path{
+  cursor: pointer;
+}
+.footerHeading{
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 500;
+font-size: 1.5rem;
+align-items: center;
+letter-spacing: 0.1px;
+color: #FFFFFF;
+text-align: center;
+}
+.footerWrapper ul{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.footerWrapper li{
+  display: flex;
+  align-items: center;
+}
+
