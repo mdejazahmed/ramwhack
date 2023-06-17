@@ -43,10 +43,26 @@
               <li class="navItem serviceNav">
                 Services
                 <ul class="flotService">
-                  <li><a class="navLink" href="software_development.html">Software Development</a></li>
-                  <li><a class="navLink" href="website_designing.html">Website Designing</a></li>
-                  <li><a class="navLink" href="mobile_app_development.html">Mobile App Development</a></li>
-                  <li><a class="navLink" href="digital_marketing.html">Digital Marketing</a></li>
+                  <li>
+                    <a class="navLink" href="software_development.html"
+                      >Software Development</a
+                    >
+                  </li>
+                  <li>
+                    <a class="navLink" href="website_designing.html"
+                      >Website Designing</a
+                    >
+                  </li>
+                  <li>
+                    <a class="navLink" href="mobile_app_development.html"
+                      >Mobile App Development</a
+                    >
+                  </li>
+                  <li>
+                    <a class="navLink" href="digital_marketing.html"
+                      >Digital Marketing</a
+                    >
+                  </li>
                   <li><a class="navLink" href="branding.html">Branding</a></li>
                 </ul>
               </li>
@@ -61,9 +77,85 @@
                 <a href="contact.html" class="navLink">Get in Touch</a>
               </li>
             </ul>
+            <!-- menu icon -->
+
+            <svg
+              id="menuIcon"
+              class="menuIcon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+            <!-- close icon -->
+            <svg
+              id="closeIcon"
+              class="closeIcon d-none"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+              />
+            </svg>
           </nav>
         </div>
+        <!-- mobile navbar -->
+        <ul id="mobileNavContainer" class="mobileNavContainer">
+          <li class="navItem">
+            <a href="index.html" class="navLink">Home</a>
+          </li>
+          <li class="navItem">
+            <a href="about.html" class="navLink">About</a>
+          </li>
+          <li id="mobileServiceBtn" class="navItem serviceNav">
+            Services
+            <ul id="mobileFlotService" class="mobileFlotService">
+              <li>
+                <a class="navLink" href="software_development.html"
+                  >Software Development</a
+                >
+              </li>
+              <li>
+                <a class="navLink" href="website_designing.html"
+                  >Website Designing</a
+                >
+              </li>
+              <li>
+                <a class="navLink" href="mobile_app_development.html"
+                  >Mobile App Development</a
+                >
+              </li>
+              <li>
+                <a class="navLink" href="digital_marketing.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a class="navLink" href="branding.html">Branding</a></li>
+            </ul>
+          </li>
+          <li class="navItem">
+            <a href="learn.html" class="navLink">Learn & Train</a>
+          </li>
+          <li class="navItem">
+            <a href="career.html" class="navLink">Career</a>
+          </li>
 
+          <li class="navItem">
+            <a href="contact.html" class="navLink">Get in Touch</a>
+          </li>
+        </ul>
       </header>
       <!-- navbar end-->
 
@@ -765,6 +857,7 @@
 
       <!-- end footer section -->
     </div>
+    <script src="/assets/script.js"></script>
     <script src="assets/plugin/bootstrap/js/bootstrap.bundle.js"></script>
   </body>
 </html>
