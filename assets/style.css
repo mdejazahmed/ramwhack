@@ -1,10 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=League+Spartan:wght@300;400;500;700&display=swap");
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
 .mainContainer {
   width: 100%;
-  background-color: #efefef;
+  background: #202020;
 }
 /* navbar */
 header {
-  width: 100%;
+  width: 100vw;
   background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.5));
   position: fixed;
   top: 0;
@@ -17,7 +23,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   color: white;
   position: relative;
 }
@@ -45,41 +50,6 @@ header {
 .mobileNavContainer {
   display: none;
 }
-@media screen and (max-width: 768px) {
-  .navItemContainer {
-    display: none;
-  }
-  .menuIcon {
-    display: block;
-    width: 2rem;
-    height: 2rem;
-  }
-  .closeIcon {
-    display: block;
-    width: 2rem;
-    height: 2rem;
-  }
-  .mobileNavContainer {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 99;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    font-family: "League Spartan";
-    height: 50vh;
-    overflow-y: scroll;
-  }
-  .mobileNavContainer > li {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-  }
-  .mobileFlotService {
-    display: none;
-  }
-}
 
 .navItem {
   list-style: none;
@@ -94,8 +64,7 @@ header {
 .flotService {
   display: none;
 }
-.mobileFlotServiceContainer {
-}
+
 .serviceNav:hover .flotService {
   position: absolute;
   top: 100%;
@@ -156,8 +125,8 @@ header {
   color: #ffffff;
 }
 .heroBtn {
-  padding: 0.5rem;
-  border-radius: 12px;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5rem;
   font-family: "League Spartan";
   font-style: normal;
   font-weight: 700;
@@ -165,6 +134,9 @@ header {
   color: #ffffff;
   border: none;
   outline: none;
+}
+.mobileNavbarServiceIcon {
+  display: none;
 }
 @media (max-width: 992px) {
   .heroHeading {
@@ -175,32 +147,182 @@ header {
   }
 
   .heroBtn {
-    border-radius: 6px;
     font-size: 0.5rem;
   }
 }
-@media (max-width: 552px) {
+/* tablet view */
+@media screen and (max-width: 768px) {
+  .navItemContainer {
+    display: none;
+  }
+  .menuIcon {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+  }
+  .closeIcon {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+  }
+  .mobileNavContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-radius: 0px 0px 100px 100px;
+    background: linear-gradient(138deg, #178ffe 0%, #954aff 100%);
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.25),
+      0px 4px 40px 0px rgba(0, 0, 0, 0.25) inset;
+    overflow: hidden;
+    display: block;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+  }
+  .navOpen {
+    height: 60vh;
+    transition: 1s;
+  }
+  .mobileNavContainer > li {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #fff;
+    font-family: League Spartan;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .closeIcon {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #fff;
+    font-family: League Spartan;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .mobileFlotService {
+    display: none;
+  }
+  .headerWrapper {
+    height: 117px;
+    background: linear-gradient(
+      0deg,
+      rgba(53, 140, 255, 0.99) 0%,
+      rgba(151, 71, 255, 0.99) 100%
+    );
+    align-items: flex-end;
+    padding: 20px;
+    margin-top: auto;
+  }
+  .mobileNavbarServiceIcon {
+    display: block;
+  }
+  .heroSec {
+    margin-top: 117px;
+  }
+  .nav {
+    align-items: center;
+  }
+  .logo {
+    width: 120px;
+  }
+  .mobileNavContainer > li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .mobileFlotService {
+    background-color: red;
+    padding: 0;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -20px;
+    padding: 24px 60px 25px 61px;
+    border-radius: 20px;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+      ),
+      linear-gradient(135deg, #8548ed 0%, #1b7adf 100%);
+    box-shadow: 0px 2px 20px -3px rgba(0, 0, 0, 0.25);
+    gap: 25px;
+  }
+  .mobileFlotService li {
+    color: #fff;
+    font-family: League Spartan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+/* mobile view */
+@media (max-width: 768px) {
+  .heroContent {
+    align-items: stretch;
+    bottom: 25px;
+  }
   .heroHeading {
-    font-size: 1.2rem;
+    color: #fff;
+    font-family: League Spartan;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
   }
   .heroPara {
-    display: none;
+    color: #fff;
+    font-family: League Spartan;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .heroBtn {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .carousel {
+    height: 100% !important;
+  }
+  .lgHeroImg {
+    display: none !important;
   }
 }
 .heroBtn1 {
-  background: #5acfff;
+  background: #3c89ff;
 }
 .heroBtn2 {
-  background: rgba(17, 46, 136, 1);
+  background: #04d8ff;
 }
 .heroBtn3 {
-  background: #5acfff;
+  background: #9a00f9;
 }
 
 /* service section */
 .serviceSec {
   width: 100%;
-  background-image: url("/assets/images/serviebg.png");
+  background-image: url("images/serviebg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -225,7 +347,6 @@ header {
   position: relative;
   z-index: 0;
   overflow: hidden;
-  transition: 0.3s;
   cursor: pointer;
 }
 .serviceCardWrapper {
@@ -257,14 +378,10 @@ header {
   font-size: 1.5rem;
   display: none;
 }
-a {
-  text-decoration: none !important;
-  color: inherit !important;
-}
-.serviceCardWrapper button {
-  margin-top: 10px;
-  display: none;
-}
+
+
+
+
 .serviceCard::after {
   width: 100%;
   height: 100%;
@@ -279,8 +396,7 @@ a {
   left: 0;
   z-index: -2;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  /* clip-path: polygon(0 93%, 100% 93%, 100% 100%, 0 100%); */
-  transition: 0.3s;
+  transition: 0.5s;
   content: "";
 }
 .serviceCard:nth-child(2)::after {
@@ -318,62 +434,43 @@ a {
 }
 
 .serviceCard:hover::after {
-  clip-path: polygon(0 93%, 100% 93%, 100% 100%, 0 100%);
+  clip-path: polygon(0 96%, 100% 96%, 100% 100%, 0 100%);
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
-  transition: 0.3s;
+  transition: 0.5s;
 }
-/* .serviceCard:nth-child(2):hover::after {
-  background-image: url("/assets/images/cardImg3.png");
-  background-size: cover;
-  clip-path: none;
-}
-.serviceCard:hover:nth-child(3):after {
-  background-image: url("/assets/images/cardImg2.png");
-  background-size: cover;
-  clip-path: none;
-}
-.serviceCard:hover:nth-child(4):after {
-  background-image: url("/assets/images/cardImg4.png");
-  background-size: cover;
-  clip-path: none;
-}
-.serviceCard:hover:nth-child(5):after {
-  background-image: url("/assets/images/cardImg5.png");
-  background-size: cover;
-  clip-path: none;
-} */
 
 .serviceCard:hover .serviceCardWrapper > h2 {
   color: black;
-display: block;
-}
-.serviceCard:hover .serviceCardWrapper > p {
-font-size: 18px;
-padding: 0 10px;
   display: block;
 }
-.serviceCard:hover .serviceCardWrapper > button {
+.serviceCard:hover .serviceCardWrapper > p {
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+}
+.serviceCardWrapper a .serviceCardBtn {
+  margin-top: 10px;
+  display: none;
+}
+.serviceCard:hover .serviceCardWrapper  a .serviceCardBtn {
   font-size: 20px;
   display: block;
 }
-.serviceCard:hover .serviceCardWrapper svg path{
-fill: #9747FF;
+.serviceCard:hover .serviceCardWrapper svg path {
+  fill: #9747ff;
 }
-.serviceCard:hover:nth-child(2) .serviceCardWrapper svg path{
-fill:url(#paint0_linear_158_233);
+.serviceCard:hover:nth-child(2) .serviceCardWrapper svg path {
+  fill: url(#paint0_linear_158_233);
 }
-.serviceCard:hover:nth-child(3) .serviceCardWrapper svg path{
-  fill:url(#paint0_linear_158_214);
+.serviceCard:hover:nth-child(3) .serviceCardWrapper svg path {
+  fill: url(#paint0_linear_158_214);
 }
-.serviceCard:hover:nth-child(4) .serviceCardWrapper svg path{
-fill:url(#paint0_linear_3_966);
+.serviceCard:hover:nth-child(4) .serviceCardWrapper svg path {
+  fill: url(#paint0_linear_3_966);
 }
-.serviceCard:hover:nth-child(5) .serviceCardWrapper svg path{
-fill:url(#paint0_linear_158_233);
+.serviceCard:hover:nth-child(5) .serviceCardWrapper svg path {
+  fill: #9747ff;
 }
-/* .serviceCard:hover:nth-child(6) .serviceCardWrapper svg path{
-fill:#9747FF;
-} */
 
 .serviceCardHeading {
   font-family: 'League Spartan"';
@@ -393,7 +490,7 @@ fill:#9747FF;
   border: none;
   outline: none;
   cursor: pointer;
-  background: #c89ffe;
+  background: #9747ff;
   border-radius: 8px;
   font-family: "League Spartan";
   font-style: normal;
@@ -401,26 +498,76 @@ fill:#9747FF;
   font-size: 1.5rem;
   line-height: 20px;
   padding: 0.5rem 1rem;
+  color: white;
 }
-.serviceCard:nth-child(2) button {
-  background: #04d8ff;
+.serviceCard:nth-child(2) .serviceCardBtn {
+  background: #0038ff;
 }
-.serviceCard:nth-child(3) button {
+.serviceCard:nth-child(3) .serviceCardBtn {
   background: #76ceff;
 }
-.serviceCard:nth-child(4) button {
+.serviceCard:nth-child(4) .serviceCardBtn {
   background: #76ceff;
 }
-.serviceCard:nth-child(5) button {
-  background: #c89ffe;
+.serviceCard:nth-child(5) .serviceCardBtn {
+  background: #9747ff;
 }
 
+.serviceCardMobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .serviceCard {
+    display: none;
+  }
+  .serviceWrapper {
+    flex-direction: row;
+    padding: 2rem 0;
+    min-height: 100%;
+  }
+  .serviceCardMobile {
+    border-radius: 15px;
+    border: 2px solid #9747ff;
+    background: #fff;
+    box-shadow: 0px 1px 25px 0px rgba(0, 0, 0, 0.25);
+    width: 163px;
+    height: 150px;
+    padding: 28px 10px 28px 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
+  .serviceCardMobile2 {
+    border-color: #40a1ff;
+  }
+  .serviceCardMobile3 {
+    border-color: #0687ff;
+  }
+  .serviceCardMobile4 {
+    border-color: #15dbff;
+  }
+  .serviceCardMobile5 {
+    border-color: #9747ff;
+  }
+
+  .serviceCardMobileMobile {
+    color: #000;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
 /* about section */
 
 .aboutSec {
   min-height: 100vh;
   width: 100%;
-  background-image: url("/assets/images/aboutBg.png");
+  background-image: url("images/aboutBg.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -432,7 +579,7 @@ fill:#9747FF;
   padding: 4rem;
 }
 .aboutHeading {
-  color: #0038ff;
+  color: #178FFE;
   font-size: 2rem;
   font-family: "League Spartan";
 }
@@ -450,10 +597,11 @@ fill:#9747FF;
   font-family: "League Spartan";
 }
 .ourHistory {
-  color: black;
+  color: #FFF;
   font-size: 3rem;
 }
 .historyPara {
+  color: #fff;
   font-family: "League Spartan";
   font-style: normal;
   font-weight: 500;
@@ -479,13 +627,12 @@ fill:#9747FF;
 }
 .aboutBottomLeft > ul {
   margin: 0;
-  padding: 0;
-  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  color: #fff;
 }
-.aboutBottomLeft > ul > li {
+.aboutBottomLeft > ol > li {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -493,19 +640,21 @@ fill:#9747FF;
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
+  color: #fff;
 }
-.aboutBottomLeft > ul > li > span {
+.aboutBottomLeft > ol > li > span {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
   background-color: rgba(151, 71, 255, 1);
 }
+
 .aboutSecBtn {
   background: #ffffff;
   border: 4px solid #4d89ff;
   border-radius: 3rem;
-  padding: 0 2rem;
-  /* font-family: 'League Spartan'; */
+  padding: 5px 2rem 0 2rem;
+  font-family: "League Spartan";
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
@@ -525,12 +674,77 @@ fill:#9747FF;
   .aboutBottom {
     flex-direction: column;
   }
+  .aboutBottomLeft ol{
+    align-self: flex-start;
+  }
+  .aboutWrapper {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutHeading {
+    color: #178ffe;
+    font-family: League Spartan;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .aboutTopLeft {
+    align-items: center;
+  }
+  .ourHistory {
+    display: none;
+  }
+  .historyPara {
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700; /* 275% */
+    letter-spacing: 0.1px;
+  }
+  .aboutBottomLeft > ol {
+    color: #fff;
+    font-family: League Spartan;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  }
+  .aboutBottomLeft > ol > li > {
+    list-style: decimal-leading-zero;
+    align-items: flex-start;
+  }
+  .aboutBottomLeft > ol > li > p {
+    color: #fff;
+    font-family: League Spartan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 200% */
+    letter-spacing: 0.1px;
+    padding: 0;
+    margin: 0;
+  }
+  .aboutSecBtn {
+    width: 100%;
+    height: 42px;
+    color: #4d89ff;
+    font-family: League Spartan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 }
-
 /* course section */
 .courseSec {
   width: 100%;
-  background-image: url("/assets/images/coursesBg.png");
+  background-image: url("images/coursesBg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -538,6 +752,7 @@ fill:#9747FF;
   width: 100%;
   padding: 4rem;
 }
+
 .courseMainHeading {
   font-family: "League Spartan";
   font-style: normal;
@@ -567,6 +782,7 @@ fill:#9747FF;
   letter-spacing: 0.1px;
   text-transform: uppercase;
   margin: 1rem 0;
+  color: #fff;
 }
 .courseCard {
   min-width: 190px;
@@ -616,6 +832,7 @@ fill:#9747FF;
   flex-wrap: wrap;
   gap: 1rem;
 }
+
 .courseCardWrapper {
   width: 100%;
   height: 100%;
@@ -677,25 +894,22 @@ fill:#9747FF;
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
-  color: #ffffff;
-  color: #262262;
+  color: #fff;
 }
 .learnPara {
   font-family: "League Spartan";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.5rem;
-  color: #ffffff;
-  color: #262262;
+  color: #fff;
 }
 
 .learnLeft > ol > li {
   font-family: "League Spartan";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.5rem;
-  color: #ffffff;
-  color: #262262;
+  color: #fff;
 }
 .learnRight {
   display: flex;
@@ -707,6 +921,108 @@ fill:#9747FF;
 @media (max-width: 768px) {
   .learnLeft {
     width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .courseCardContainer {
+    justify-content: center;
+  }
+  .courseWrapper {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .courseMainHeading {
+    color: #178ffe;
+    font-family: League Spartan;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .courseLeftHeading {
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 120% */
+    letter-spacing: 0.1px;
+    text-transform: capitalize;
+  }
+
+  .courseCard {
+    min-width: 81px;
+    height: 81px;
+    background-color: #178ffe;
+    border: none;
+  }
+  .courseCard:nth-child(2) {
+    background-color: #9747ff;
+    border: none;
+  }
+  .courseCard:nth-child(3) {
+    background-color: #178ffe;
+    border: none;
+  }
+  .courseCard:nth-child(4) {
+    background-color: #9747ff;
+    border: none;
+  }
+  .courseCard:nth-child(5) {
+    background-color: #178ffe;
+    border: none;
+  }
+  .courseCard:nth-child(6) {
+    background-color: #9747ff;
+    border: none;
+  }
+  .courseCardWrapper > svg > path {
+    fill: white;
+  }
+  .courseCardWrapper > p {
+    display: none;
+  }
+  .learnWarapper {
+    padding: 1rem;
+  }
+  .learnLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .learnHeading {
+    color: #fff;
+    font-family: League Spartan;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .learnPara {
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 120% */
+    letter-spacing: 0.5px;
+  }
+  .learnLeft > ol > li {
+    color: #fff;
+    font-family: League Spartan;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 214.286% */
+    letter-spacing: 1.1px;
+  }
+  .aboutSecBtn {
   }
 }
 
@@ -732,10 +1048,19 @@ footer {
   align-items: center;
   gap: 1rem;
 }
+.footerAddress {
+  display: block !important;
+}
+.footerAddress .footerPara {
+  margin-top: 10px;
+}
 .footerLogo {
   width: 100%;
 }
 .footerPara {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
   font-family: "League Spartan";
   font-style: normal;
   font-weight: 500;
@@ -761,7 +1086,7 @@ footer {
   color: #ffffff;
   text-align: center;
 }
-.footerWrapper ul {
+.footerWrapper ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -774,6 +1099,25 @@ footer {
 .footerWrapper li:hover {
   transform: scale(110%) translateX(10%);
 }
+.copyRightContainer {
+  background: rgba(111, 111, 111, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px; /* 230% */
+  letter-spacing: 0.1px;
+}
+.CopyrightPara {
+  margin-bottom: 0;
+  padding: 1rem 0;
+  font-size: 20px;
+}
 @media screen and (max-width: 768px) {
   .footerWrapper {
     flex-direction: column;
@@ -782,10 +1126,51 @@ footer {
     align-items: flex-start;
   }
 }
+@media screen and (max-width: 768px) {
+  .CopyrightPara {
+    font-size: 10px;
+  }
+  .footerWrapper {
+    padding: 1rem;
+  }
+  .footerWrapper > div {
+    gap: 0;
+  }
+  .footerServiceContainer > ul {
+    margin: 0;
+    padding: 0;
+  }
+  .footerOtherResources > ul {
+    margin: 0;
+    padding: 0;
+  }
+  .footerLogoContainer {
+    order: 4;
+  }
+  .footerAddress {
+    display: flex !important;
+  }
+  .footerLogoContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .footerLogo {
+    width: 171px;
+    height: 63px;
+  }
+  .footerLogoContainer p {
+    text-align: center;
+  }
+  .socialIconContainer {
+    align-self: center;
+  }
+}
 
 /* banner */
 .banner {
   width: 100%;
+  background-color: #202020;;
 }
 .bannerWrapper {
   width: 100%;
@@ -837,34 +1222,66 @@ footer {
     width: 100%;
   }
 }
+@media screen and (max-width: 768px) {
+  .bannerImg {
+    width: 109px;
+  }
+  .bannerLeft {
+    width: 100%;
+  }
+  .bannerHeading {
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .bannerWrapper {
+    border-radius: 0px 0px 30px 30px;
+    background: linear-gradient(
+      0deg,
+      rgba(53, 140, 255, 0.99) 0%,
+      rgba(151, 71, 255, 0.99) 100%
+    );
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.25);
+    justify-content: flex-start;
+  }
+  .aboutBottomLeft ul li {
+    color: #fff;
+    font-family: League Spartan;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 200% */
+    letter-spacing: 0.1px;
+  }
+}
 /* learn and train */
 .learnTrainSec {
   width: 100%;
-  background-image: url("/assets/images/learnAndTrainBg.png");
+  background: url("images/learnAndTrainBg.png"), #202020;;
   background-size: cover;
 }
 .learnTrainWrapper {
   width: 100%;
   padding: 4rem;
 }
-@media (max-width: 768px) {
-  .learnTrainWrapper {
-    padding: 1rem;
-  }
-}
+
 .learnTrainHeading {
   font-family: "League Spartan";
   font-style: normal;
   font-weight: 500;
   font-size: 3rem;
-  color: #000000;
+  color: #fff;
 }
 .learnTrainPara {
   font-family: "League Spartan";
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
-  color: #000000;
+  color: #fff;
   margin-bottom: 2rem;
 }
 .providings {
@@ -880,7 +1297,7 @@ footer {
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
-  color: #000000;
+  color: #fff;
 }
 
 .providingsRight {
@@ -889,165 +1306,193 @@ footer {
 .providingsImg {
   width: 100%;
 }
-.learnTrainCardContainer {
+.learnCompartment {
+  min-height: 693px;
+  width: 100%;
+  border-radius: 30px;
+  background: rgba(95, 100, 215, 0.1);
+  box-shadow: 0px 2px 30px -5px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(25px);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 44px;
+}
+.learnCompartmentHeading {
+  margin-top: 80px;
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.compartmentCardcontainer {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 92px;
 }
-.type2card {
-  width: 500px;
-  min-height: 320px;
-  background-color: white;
-  border-radius: 2rem;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-}
-.type2card::after {
-  width: 100%;
-  height: 100%;
-  background: #5bdcfd;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  clip-path: ellipse(60% 20% at 50% 100%);
-  transition: 0.3s;
-  content: "";
-}
-.type2card:nth-child(even):after {
-  width: 100%;
-  height: 100%;
-  background: #9747ff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  clip-path: ellipse(60% 20% at 50% 100%);
-  transition: 0.3s;
-  content: "";
-}
-.type2card::before {
-  width: 100%;
-  height: 100%;
-  background: #9747ff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  clip-path: ellipse(60% 20% at 50% 0%);
-  transition: 0.3s;
-  content: "";
-}
-.type2card:nth-child(even):before {
-  width: 100%;
-  height: 100%;
-  background: #5bdcfd;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  clip-path: ellipse(60% 20% at 50% 0%);
-  transition: 0.3s;
-  content: "";
-}
-
-.type2cardWrapper {
-  width: 100%;
-  height: 100%;
+.learnCard {
+  width: 363px;
+  min-height: 422px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 2px 20px -4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+  overflow: hidden;
+ 
 }
-.learnTrainCardContainer h2 {
-  font-family: "League Spartan";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2.5rem;
-  text-align: center;
-  color: #ffffff;
-}
-.learnTrainCardContainer div {
+.learnCardHeading {
+  align-self: stretch;
+  min-height: 87px;
+  background: linear-gradient(132deg, #178ffe 0%, #9747ff 100%);
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-.learnTrainCardContainer div h3 {
-  font-family: "League Spartan";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2rem;
+  justify-content: center;
+  color: #fff;
   text-align: center;
-  color: #000000;
-}
-.learnTrainCardContainer div p {
-  text-align: center;
-  font-family: "League Spartan";
+  font-size: 25px;
   font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  color: #000000;
+  font-weight: 700;
+  line-height: normal;
 }
-.learnTrainCardContainer button {
-  background-color: transparent;
-  padding: 0.2rem 1rem;
-  border: 1px solid #000000;
-  border-radius: 42px;
-  /* font-family: "League Spartan"; */
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  text-align: center;
-  color: #000000;
+.learnCardPara{
+  color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding: .5rem;
 }
-.type2card:hover .type2cardWrapper > div > p {
+.learnCardBtn{
+  border-radius: 67px;
+border: 3px solid #178FFE;
+background: #FFF;
+color: #178FFE;
+font-family: League Spartan;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 28px;
+padding: .5rem 1rem;
+transition: .5s;
+}
+.learnCardBtn:hover{
+  background-color: #178FFE;
+  color: #FFF;
+  transition: 1s;
+}
+.learnCardBtn svg{
   display: none;
 }
-.type2card:hover .type2cardWrapper > div > h3 {
-  transform: scale(110%) translateY(40px);
-  color: white;
-  transition: 0.3s;
-}
-.type2card:hover .type2cardWrapper > h2 {
-  transform: scale(120%) translateY(70px);
-  color: white;
-  transition: 0.3s;
-}
-.type2card:hover .type2cardWrapper > button {
-  margin-bottom: 5rem;
-  border: 2px solid #ffffff;
-  border-radius: 42px;
-  color: white;
-  transform: translateY(40px) scale(150%);
-  transition: 0.3s;
-}
-.type2card:hover {
-  border-radius: 30px;
-  background: linear-gradient(180deg, #9747ff 51.87%, #58e3fd 100%);
-  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
-  background-size: cover;
-}
-.type2card:nth-child(even):hover {
-  border-radius: 30px;
-  background: linear-gradient(180deg, #9747ff 51.87%, #58e3fd 100%);
-  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25);
-  background-size: cover;
-}
-.type2card:hover::after {
-  display: none;
-}
-.type2card:hover::before {
-  display: none;
-}
+@media screen and (max-width: 768px) {
+  .learnTrainWrapper {
+    padding: 1rem;
+  }
+   .learnTrainSec {
+    background-size: inherit;
+  }
+ 
+  .learnCompartmentHeading{
+    color: #fff;
+font-family: League Spartan;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-top: 29px;
+  }
+  .compartmentCardcontainer{
+    margin-top: 26px;
+  }
+  .learnCompartment{
+    min-height: 100%;
+  }
+  .learnTrainHeading {
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .learnTrainPara {
+    color: #fff;
+    font-family: League Spartan;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 133.5%; /* 20.025px */
+  }
+  .providingsLeft {
+    color: #fff;
+    font-family:" League Spartan";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+  }
+  .providings {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+  .providingsRight {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .learnCard{
+    min-height: 84px;
+  }
+  .learnCardHeading{
+    color: #FFF;
+font-family: League Spartan;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 114%; /* 22.8px */
+min-height: 49px;
 
+  }
+  .learnCardPara{
+    display: none;
+  }
+  .learnCardBtn{
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    pointer-events: none;
+    color: #000;
+    margin-bottom: 0;
+font-family: League Spartan;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 114%; /* 22.8px */
+  }
+  .learnCardBtn svg{
+    display: block;
+  }
+}
 
 /* career page */
 .careerSec {
   width: 100%;
-  background-image: url("/assets/images/careerBg.png");
+  background-image: url("images/careerBg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1061,7 +1506,7 @@ footer {
   font-weight: 500;
   font-size: 4rem;
   text-align: center;
-  color: #000000;
+  color: #fff;
 }
 .careerCardContainer {
   width: 100%;
@@ -1169,31 +1614,84 @@ footer {
   transform: scale(140%) translateY(-200%);
   transition: 0.3s;
 }
+@media screen and (max-width: 768px) {
+  .careerHeading {
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .careerCard {
+    width: 354px;
+    min-height: 219px;
+    pointer-events: none;
+  }
+  .careerCardWrapper {
+    padding: 0;
+    align-items: stretch;
+  }
+  .careerCardWrapper div {
+    align-items: stretch;
+  }
+  .careerCardWrapper h2 {
+    display: none;
+  }
+  .careerCardWrapper h3 {
+    background: linear-gradient(140deg, #9747ff 0%, #04d8ff 100%);
+    height: 44px;
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .careerCardWrapper button {
+    width: 100%;
+    height: 50px;
+    border-radius: 0;
+    background: #009ff9;
+  }
+  .careerCard::after {
+    display: none;
+  }
+  .careerCardWrapper p {
+    color: #000;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
+    text-transform: capitalize;
+    padding: 10px;
+  }
+}
 
 /* software development */
 .softwareSec {
   width: 100%;
-  background-image: url("/assets/images/largeBg.jpg");
+  background: url("images/largeBg.jpg"),#202020;;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .softwareSecWrapper {
   width: 100%;
   padding: 4rem;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .softwareSecWrapper > div {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
-}
-@media (max-width: 786px) {
-  .softwareSecWrapper > div {
-    flex-direction: column;
-    align-items: center;
-  }
-  .softwareSecWrapper {
-    padding: 1rem;
-  }
 }
 .softwareSecLeft {
   flex: 1;
@@ -1202,22 +1700,22 @@ footer {
 }
 .softwareSecRight {
   flex: 1;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 .softwareSecWrapper h2 {
   font-family: "League Spartan";
   font-style: normal;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #000000;
+  color: #fff;
 }
 .softwareSecWrapper p {
   font-family: "League Spartan";
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
-  color: #000000;
+  color: #fff;
 }
 .softwareSecWrapper img {
   width: 80%;
@@ -1272,11 +1770,6 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-}
-@media (max-width: 768px) {
-  .softDevCardWrapper > div {
-    flex-direction: column;
-  }
 }
 .softDevCardWrapper h3 {
   font-family: "League Spartan";
@@ -1373,13 +1866,134 @@ footer {
   font-weight: 700;
   font-size: 3rem;
   text-align: center;
-  color: #000000;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .softwareSecWrapper > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .softwareSecWrapper {
+    padding: 1rem;
+  }
+  .softDevCardWrapper > div {
+    flex-direction: column;
+  }
+  .muchMore {
+    margin-top: 57px;
+    gap: 0 !important;
+  }
+  .muchMore h4 {
+    color: #000;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .muchMore p {
+    color: #000;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .softDevCard {
+    min-height: 103px;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .softwareSecWrapper > h1 {
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 133.5%; /* 40.05px */
+  }
+  .softDevCard::before {
+    display: none;
+  }
+  .softDevCardWrapper p {
+    display: none;
+  }
+  .softDevCardWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 103px;
+    padding: 0;
+  }
+
+  .softDevCardWrapper div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .softDevCardWrapper div h3 {
+    margin-bottom: 0;
+  }
+  .softwareSecWrapper {
+    align-items: center;
+  }
+  .softwareSecWrapper img {
+    width: 157px;
+  }
+  .softwareSecWrapper h2 {
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .softwareSecWrapper h3 {
+    color: #000;
+    font-family: League Spartan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+  }
+  .softwareSecWrapper svg {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+  }
+  .softwareSecLeft {
+    align-items: center;
+  }
+  .softwareSecRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .softwareSecWrapper p {
+    color: #fff;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 133.5%; /* 20.025px */
+    width: 90%;
+  }
+  .softwareSecWrapper > div {
+    flex-direction: column;
+  }
 }
 
 /* contact */
 .contactSec {
   width: 100%;
-  background-image: url("/assets/images/contaactBgimg.png");
+  background-image: url("images/contaactBgimg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1470,7 +2084,11 @@ form {
   align-items: flex-start;
   gap: 1rem;
 }
-.contactRight p {
+.contactRight div svg {
+  flex: 0.5;
+}
+.contactRight div p {
+  flex: 10;
   font-family: "League Spartan";
   font-style: normal;
   font-weight: 500;
@@ -1533,5 +2151,459 @@ textarea {
     width: 100%;
     margin-top: 2rem;
     padding: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contactWrapper {
+    padding: 1rem;
+  }
+  .contactBtnDiv {
+    flex-direction: column-reverse;
+  }
+  .contactBtnOutline {
+    width: 100%;
+  }
+  .contactBtn {
+    width: 100%;
+  }
+  .contactRightTab {
+    border-radius: 20px;
+  }
+  .firstNameLastName {
+    gap: 16px;
+  }
+
+  .firstname {
+    width: 50%;
+    height: 40px;
+    border-radius: 48px;
+    background: #fff;
+    box-shadow: 0px 2px 10px -5px rgba(0, 0, 0, 0.25);
+  }
+  .email {
+    height: 40px;
+    border-radius: 48px;
+    background: #fff;
+    box-shadow: 0px 2px 10px -5px rgba(0, 0, 0, 0.25);
+  }
+  .subject {
+    height: 40px;
+    border-radius: 48px;
+    background: #fff;
+    box-shadow: 0px 2px 10px -5px rgba(0, 0, 0, 0.25);
+  }
+  textarea {
+    border-radius: 20px;
+    padding: 21px 26px;
+  }
+}
+.goTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 1rem;
+  border: none;
+  background-color: transparent;
+}
+.goTopOpen {
+  display: block;
+  transform: rotate(-90deg);
+  z-index: 99;
+}
+.goTopBtn svg {
+}
+.projectSec{
+  width: 100%;
+  background: #202020;;
+}
+.projectSecWrapper{
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/assets/images/largeBgMobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.websiteProjectContainer{
+  width: 90%;
+  min-height: 1848px;
+  margin-top: 110px;
+  border-radius: 30px;
+border: 1px solid #FFF;
+background: rgba(0, 4, 95, 0.10);
+backdrop-filter: blur(15px);
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0 45px;
+gap: 80px;
+}
+.websiteProjectContainer h1{
+  color: #fff;
+text-align: center;
+font-family: League Spartan;
+font-size: 64px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: uppercase;
+margin-top: 81px;
+}
+.websitesCard{
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  min-height: 387px;;
+}
+.websitesCard:nth-child(odd){
+  flex-direction: row-reverse;
+}
+.websiteImgContainer{
+  flex: 4;
+}
+.websiteImg{
+ width: 100%;
+  border-radius: 20px;
+box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.25);
+}
+.websiteCardTexts{
+  flex: 6;
+  padding: 40px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.websiteCardTexts p{
+  color: #fff;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 105%; /* 21px */
+}
+.projectLogo{
+  width: 60%;
+}
+.projectBtn{
+  border-radius: 20px;
+border: 2px solid #178FFE;
+background-color: transparent;
+outline: none;
+cursor: pointer;
+color: #178FFE;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 105%; /* 25.2px */
+padding: 10px 36px;
+}
+.muchMoreDiv{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 0;
+}
+.muchMoreHeading{
+  color: #fff;
+text-align: center;
+font-family: League Spartan;
+font-size: 35px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.muchMoreDiv p{
+  color: #fff;
+text-align: center;
+font-family: League Spartan;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.muchMoreDiv button{
+  border-radius: 67px;
+border: 3px solid #178FFE;
+background: #FFF;
+padding: 27px 63px 19px 63px;
+color: #178FFE;
+font-family: League Spartan;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+transition: .5s;
+}
+.muchMoreDiv button:hover{
+  background-color: #178FFE;
+  color: white;
+  transition: .5s;
+}
+.packageDesign{
+  margin-top: 92px;
+  width: 90%;
+}
+.packageDesign h1{
+  color: #fff;
+text-align: center;
+font-family: League Spartan;
+font-size: 48px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.packageDesignContainer{
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 37px;
+  margin-top: 80px;
+}
+.packageCard{
+  border-radius: 15px;
+  background: rgba(0, 4, 95, 0.10);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(50px);
+width: 334px;
+height: 480px;
+overflow: hidden;
+}
+.packageCardTexts{
+  padding: 20px;
+}
+.packageCardTexts h3{
+  color: #ffff;
+font-family: League Spartan;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.packageCardTexts p{
+  color: #fff;
+font-family: League Spartan;
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+.appDesign{
+  margin-top: 100px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.appDesign h1{
+  color: #fff;
+text-align: center;
+font-family: League Spartan;
+font-size: 48px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.movieContainer{
+  width: 100%;
+  min-height: 480px;
+  border-radius: 15px;
+background: rgba(0, 4, 95, 0.10);
+backdrop-filter: blur(50px);
+padding: 24px;
+display: flex;
+align-items: center;
+margin-top: 62px;
+gap: 20px;
+}
+.movie{
+  flex: 1;
+  align-self: stretch;
+}
+iframe{
+  width: 100%;
+  height: 100%;
+}
+.appDesignTexts{
+  flex: 1;
+  padding: 10px;
+}
+.appLogo{
+  width: 60%;
+}
+.appDesignTexts p{
+  color: #fff;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 105%; /* 21px */
+margin: 20px 0;
+}
+.appDesignTexts button{
+  border-radius: 20px;
+border: 2px solid #178FFE;
+padding: 10px 36px;
+color: #178FFE;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 105%; /* 25.2px */
+background-color: transparent;
+
+}
+.packageCardMobile{
+  display: none;
+}
+@media screen and (max-width:768px) {
+  .projectSecWrapper{
+    background-image: url("/assets/images/projectcBgMobile.png");
+    background-repeat: repeat;
+    background-size: contain;
+  }
+  .websiteProjectContainer{
+    border: none;
+background:transparent;
+backdrop-filter:none;
+gap: 27px;
+margin-top: 0;
+  }
+  .websiteProjectContainer h1{
+    margin-top: 20px;
+    color: #fff;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 105%; /* 25.2px */
+  }
+  .websiteImg{
+    border-radius: 20px;
+background:none;
+box-shadow: none;
+  }
+  .websiteCardTexts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .websitesCard{
+    flex-direction: column;
+border-radius: 15px;
+background: rgba(0, 4, 95, 0.10);
+backdrop-filter: blur(10px);
+  }
+  .websitesCard:nth-child(odd){
+flex-direction: column;
+  }
+  .movieContainer{
+    flex-direction: column;
+  }
+  .projectBtn{
+   width: 100%;
+   border-radius: 15px;
+background: #178FFE;
+color: #FFF;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 105%; /* 21px */
+pointer-events: none;
+height: 53px;
+  }
+  .websiteProjectContainer{
+    padding: 0;
+  }
+  .websiteCardTexts{
+    padding: 16px;
+  }
+  .projectSec h1{
+    font-size: 38px;
+  }
+  .packageDesign{
+    margin-top: 30px;
+  }
+  .packageDesignContainer{
+    margin-top: 26px;
+  }
+  .packageCardMobile{
+    margin-top: 26px;
+  }
+  .appDesign{
+    margin-top: 30px;
+  }
+  .movieContainer{
+    margin-top: 26px;
+  }
+  iframe{
+    height: 244px;
+  }
+  .appLogo{
+    width: 100%;
+  }
+  .appDesignTexts{
+    padding: 0;
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+  }
+  .appDesignTexts p{
+    margin: 0;
+  }
+  .appDesignTexts button{
+    width: 100%;
+    border-radius: 15px;
+background: #178FFE;
+color: #FFF;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 105%; /* 21px */
+
+
+  }
+.muchMoreDiv{
+  width: 100%;
+  align-items: stretch;
+}
+  .muchMoreDiv button {
+    border-radius: 40px;
+    background: #009FF9;
+    box-shadow: 0px 2px 20px -5px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+width: 100%;
+padding:10px;
+
+  }
+  .muchMoreHeading{
+    color: #fff;
+text-align: center;
+font-family: League Spartan;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+  }
+}
+@media screen and (max-width:552px){
+  .packageCardMobile{
+    display: block;
+  }
+  .packageDesignContainer{
+    display: none;
   }
 }
